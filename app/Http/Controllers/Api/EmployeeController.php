@@ -31,7 +31,6 @@ class EmployeeController extends Controller
                 "regex"=>"this filed must be letters",
                 "hiringDate.required"=>"the hiring date is required",
                 "date"=>"invalid value, try to enter a suitable date",
-                "date_format"=>"invalid format"
 
             ];
 
@@ -63,7 +62,7 @@ class EmployeeController extends Controller
             $rules = [
                 "first_name" => "required|regex:/^[\pL\s\-]+$/u|max:20",
                 'last_name'=> "required|regex:/^[\pL\s\-]+$/u|max:20",
-                'hiringDate'=>"required|date|date_format:mm.dd.yyyy",
+                'hiringDate'=>"required|date",
 
             ];
             $messages = [
@@ -72,7 +71,6 @@ class EmployeeController extends Controller
                 "regex"=>"this filed must be letters",
                 "hiringDate.required"=>"the hiring date is required",
                 "date"=>"invalid value, try to enter a suitable date",
-                "date_format"=>"invalid format"
 
             ];
             $validator = Validator::make($request->all(), $rules , $messages);
