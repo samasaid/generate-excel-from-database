@@ -88,7 +88,7 @@ class EmployeeController extends Controller
             $employee->update([
                 'first_name'=>$request->first_name,
                 'last_name'=>$request->last_name,
-                'hiringDate'=>$request->hiring_date,
+                'hiringDate'=>$request->hiringDate,
             ]);
             //return success message
             $msg = "employee information has been updated successfully";
