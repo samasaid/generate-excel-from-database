@@ -126,6 +126,7 @@ class EmployeeController extends Controller
                 }
 
     }
+    // this function for export the excel file
     public function get_employee_data()
     {
         return Excel::download(new EmployeeExport, 'Employees.xlsx');

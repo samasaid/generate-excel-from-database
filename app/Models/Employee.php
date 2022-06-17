@@ -30,9 +30,7 @@ class Employee extends Model
    public function getHiringDateAttribute($value){
     return Carbon::parse($value)->format('mm-dd-yyyy');
    }
-//    public function setHiringDateAttribute($value){
-//     return Carbon::parse($value)->format('mm-dd-yyyy');
-//    }
+
 
 
 
